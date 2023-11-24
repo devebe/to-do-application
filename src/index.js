@@ -1,14 +1,12 @@
 import './style.css';
 import Project from './data/project';
+import ToDo from './data/todo';
 
-const dod = new Project('dod');
+const project = new Project('project');
 
-console.log(dod);
+project.appendToList(new ToDo('Get shit done','01-01-2024'));
+project.appendToList(new ToDo('Wash my lingerie', '02-01-2024'));
+project.deleteFromList('Get shit done');
+project.updateToDoInList('Wash my lingerie', 'title', 'Wash my underwear');
 
-dod.createToDo('pop');
-dod.createToDo('plop');
-dod.createToDo('Rob a bank', '11-11-2023', 'Get a gun and rob the bank');
-dod.deleteToDo('plop');
-dod.updateToDo('pop','title','Ploppers');
-let selectedToDo = dod.readToDo('Rob a bank');
-console.log(selectedToDo);
+console.log(project);

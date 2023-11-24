@@ -1,10 +1,9 @@
 export default class ToDo {
-    constructor(title) {
+    constructor(title, dueDate, description) {
         this.title = title;
-        this.dueDate = null;
-        this.description = null;
-        this.priority = null;
-        this.notes = null;
+        this.dueDate = dueDate;
+        this.description = description;
+        this.priority = 0;
         this.isComplete = false;
     };
 };
