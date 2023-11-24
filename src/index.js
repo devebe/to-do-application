@@ -10,3 +10,5 @@ dod.createToDo('plop');
 dod.createToDo('Rob a bank', '11-11-2023', 'Get a gun and rob the bank');
 dod.deleteToDo('plop');
 dod.updateToDo('pop','title','Ploppers');
+let selectedToDo = dod.readToDo('Rob a bank');
+console.log(selectedToDo);

@@ -15,19 +15,27 @@ export default class Project {
         this.list.push(toDo);
     };
 
+    readToDo(title) {
+        this.list.forEach(toDo => {
+            if (toDo.title == title) {
+                return toDo;
+            };
+        });
+    }
+
     updateToDo(title, key, value) {
-        this.list.forEach(todo => {
-            if (todo.title == title) {
-                let index = this.list.indexOf(todo);
+        this.list.forEach(toDo => {
+            if (toDo.title == title) {
+                let index = this.list.indexOf(toDo);
                 this.list[index][key] = value;
             };
         });
     }
 
     deleteToDo(title) {
-        this.list.forEach(todo => {
-            if (todo.title == title) {
-                this.list.splice((this.list.indexOf(todo)), 1);
+        this.list.forEach(toDo => {
+            if (toDo.title == title) {
+                this.list.splice((this.list.indexOf(toDo)), 1);
             };
         });
     };
