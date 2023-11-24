@@ -6,19 +6,19 @@ export default class Project {
         this.list = [];
     };
 
-    appendToList(toDo){
-        this.list.push(toDo);
+    appendToList(item) {
+        this.list.push(item);
     };
 
-    deleteFromList(toDoTitle){
-        const toBeDeleted = this.getFromList(toDoTitle);
+    deleteFromList(itemTitle){
+        const toBeDeleted = this.getFromList(itemTitle);
         this.list.splice((this.list.indexOf(toBeDeleted)),1);
     };
 
-    getFromList(toDoTitle) {
-        const targetToDo = this.list.find(item => item.title == toDoTitle);
-        if (targetToDo) {
-            return targetToDo;
+    getFromList(itemTitle) {
+        const targetItem = this.list.find(item => item.title == itemTitle);
+        if (targetItem) {
+            return targetItem;
         };
     };
 
